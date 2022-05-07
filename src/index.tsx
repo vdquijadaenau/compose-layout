@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 
 import { Center } from "@bedrock-layout/center";
 import styled from "styled-components";
+import Subscribe from "./components/stack1";
 
 import "./reset.css";
-import App from "./App";
 
 const BaseStyles = styled(Center)`
   input {
@@ -28,6 +28,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BaseStyles />
+    <BaseStyles>
+      <Subscribe />
+    </BaseStyles>
   </React.StrictMode>
 );
