@@ -1,4 +1,4 @@
-import { Stack } from "./styles";
+import { Stack } from "./StyledComponents";
 
 export default function Subscribe() {
   return (
@@ -11,7 +11,7 @@ export default function Subscribe() {
         </p>
       </Stack>
 
-      <Stack gutter='xl'>
+      <Stack>
         <Stack gutter='sm'>
           <label htmlFor='name'>Name</label>
           <input type='text' id='name' />
