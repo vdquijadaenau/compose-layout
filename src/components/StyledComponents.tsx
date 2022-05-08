@@ -18,6 +18,15 @@ interface SplitProps {
   fraction?: string;
 }
 
+interface ColumnsProps {
+  gutter?: string;
+  columns?: number;
+}
+
+interface ColumnProps {
+  $span?: number;
+}
+
 export const BaseStyles = styled(Center).attrs(() => ({
   as: PadBox,
 }))<BaseProps>`
@@ -46,4 +55,15 @@ export const Split = styled.div<SplitProps>`
 export const Stack = styled.div<StackProps>`
   display: grid;
   gap: ${({ gutter }) => (gutter ? spacingMap[gutter] : "1rem")};
+`;
+
+export const Columns = styled.div<ColumnsProps>`
+  --columns: ${({ columns = 1 }) => columns};
+  display: grid;
+  gap: ${({ gutter }) => (gutter ? spacingMap[gutter] : spacingMap.lg)};
+  grid-template-columns: repeat(var(--columns), 1f);
+`;
+
+export const Column = styled.div<ColumnProps>`
+  grid-column: span min(${({ $span = 1 }) => $span}, var(--columns));
 `;

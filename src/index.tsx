@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BaseStyles padding='mdLg' maxWidth='50rem'>
+    <BaseStyles padding='mdLg' maxWidth='85rem'>
       <FormSideBar />
     </BaseStyles>
   </React.StrictMode>
