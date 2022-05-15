@@ -1,18 +1,31 @@
 import React from "react";
-import { Frame } from "@bedrock-layout/frame";
-import { PadBox } from "@bedrock-layout/padbox";
-import { Split } from "./StyledComponents";
-import { Stack } from "./StyledComponents";
-import { InlineCluster } from "@bedrock-layout/inline-cluster";
+import Card from "./Card";
 import styled from "styled-components";
+import { spacingMap } from "./spacingMap";
 
-const Avatar = styled(Frame).attrs(() => ({ ratio: [1, 1] }))`
-  border-radius: 50%;
-  background-color: black;
-`;
-
-function Grid() {
-  return <div>Grid</div>;
+interface GridProps {
+  gutter?: string;
 }
 
-export default Grid;
+const Grid = styled.div<GridProps>`
+  display: grid;
+  gap: ${({ gutter }) => (gutter ? spacingMap[gutter] : spacingMap.lg)};
+
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+`;
+
+function ContactList() {
+  return (
+    <Grid>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </Grid>
+  );
+}
+
+export default ContactList;

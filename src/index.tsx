@@ -2,17 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // import Subscribe from "./components/Subscribe";
-import FormSideBar from "./components/FormSideBar";
-import { BaseStyles } from "./components/StyledComponents";
+import { PadBox } from "@bedrock-layout/padbox";
+import { Center } from "@bedrock-layout/center";
 import "./reset.css";
+import ContactList from "./components/Grid";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BaseStyles padding='mdLg' maxWidth='85rem'>
-      <FormSideBar />
-    </BaseStyles>
+    <PadBox
+      as={Center}
+      padding='lg'
+      maxWidth='85rem'
+      style={{ fontFamily: "sans-serif" }}
+    >
+      <ContactList />
+    </PadBox>
   </React.StrictMode>
 );
