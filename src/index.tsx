@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 import { PadBox } from "@bedrock-layout/padbox";
 import { Center } from "@bedrock-layout/center";
 import "./reset.css";
-import ContactList from "./components/Grid";
+import MenuBar from "./components/MenuBar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,7 +18,7 @@ root.render(
       maxWidth='85rem'
       style={{ fontFamily: "sans-serif" }}
     >
-      <ContactList />
+      <MenuBar />
     </PadBox>
   </React.StrictMode>
 );
