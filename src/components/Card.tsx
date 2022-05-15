@@ -14,7 +14,7 @@ const Avatar = styled(Frame).attrs(() => ({ ratio: [1, 1] }))`
 
 const RadiusWrapper = styled.div`
   border: 1px solid black;
-  border-radius: 0.5 rem;
+  border-radius: 0.5rem;
   min-width: min-content;
 `;
 

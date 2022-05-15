@@ -5,18 +5,25 @@ import { spacingMap } from "./spacingMap";
 
 interface GridProps {
   gutter?: string;
+  minItemWidth?: string;
 }
 
 const Grid = styled.div<GridProps>`
   display: grid;
   gap: ${({ gutter }) => (gutter ? spacingMap[gutter] : spacingMap.lg)};
 
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(${({ minItemWidth }) => (minItemWidth ? minItemWidth : "")}, 100%),
+      1fr
+    )
+  );
 `;
 
 function ContactList() {
   return (
-    <Grid>
+    <Grid gutter='xl' minItemWidth='24rem'>
       <Card />
       <Card />
       <Card />
