@@ -30,7 +30,7 @@ export default function ({ children }: MenuProps) {
     <MenuContainer>
       <Menu gutter='lg' switchAt='35rem' fraction='auto-start'>
         <Logo />
-        {children && children}
+        {children}
       </Menu>
     </MenuContainer>
   );

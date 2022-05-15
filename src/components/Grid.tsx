@@ -15,7 +15,10 @@ const Grid = styled.div<GridProps>`
   grid-template-columns: repeat(
     auto-fit,
     minmax(
-      min(${({ minItemWidth }) => (minItemWidth ? minItemWidth : "")}, 100%),
+      min(
+        ${({ minItemWidth }) => (minItemWidth ? minItemWidth : "24rem")},
+        100%
+      ),
       1fr
     )
   );

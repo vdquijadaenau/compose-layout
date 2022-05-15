@@ -20,3 +20,9 @@ export const gridFractions: ComposingMap = {
   "auto-start": "auto 1fr",
   "auto-end": "1fr auto",
 };
+
+export const justifyAlignMap: ComposingMap = {
+  start: "flex-start",
+  end: "flex-end",
+  center: "center",
+};
