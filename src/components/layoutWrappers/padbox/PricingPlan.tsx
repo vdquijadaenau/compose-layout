@@ -17,7 +17,7 @@ import {
 const PricingPlan = () => {
   return (
     <Card>
-      <PadBox>
+      <PadBox padding='lg'>
         <Top>
           <PlanName>Basic</PlanName>
           <Description>All the basics for getting started</Description>
@@ -28,7 +28,7 @@ const PricingPlan = () => {
         </Top>
       </PadBox>
       <Bottom>
-        <PadBox>
+        <PadBox padding='lg'>
           <Stack gutter='md'>
             <span>What's included</span>
             <ul>

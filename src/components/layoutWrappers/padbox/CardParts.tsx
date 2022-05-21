@@ -5,7 +5,7 @@ import { spacingMap } from "../../layoutPrimitives/spacingMap";
 
 interface IProps {
   gutter?: string;
-  padding?: string;
+  padding?: string | string[];
   children?: React.ReactNode;
 }
 
@@ -18,13 +18,6 @@ export const Top = (props: IProps) => <Stack {...props} gutter='md' />;
 
 export const Bottom = styled.div`
   border-top: 1px solid black;
-`;
-
-export const Button = styled.div`
-  background: black;
-  color: white;
-  border: node;
-  border-radius: 0.25rem;
 `;
 
 export const Description = styled.p`
@@ -50,4 +43,14 @@ export const PadBox = styled.div<IProps>`
         .join(" ");
     }
   }};
+`;
+
+export const Button = styled(PadBox).attrs(() => ({
+  as: "button",
+  padding: ["sm", "xl"],
+}))`
+  background: black;
+  color: white;
+  border: node;
+  border-radius: 0.25rem;
 `;
