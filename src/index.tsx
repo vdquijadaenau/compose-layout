@@ -6,7 +6,7 @@ import { PadBox } from "@bedrock-layout/padbox";
 import { Center } from "@bedrock-layout/center";
 
 import "./reset.css";
-import PricingPlans from "./components/layoutWrappers/padbox/PricingPlan";
+import Testimonial from "./components/layoutWrappers/Center/Testimonial";
 
 const AppStyles = styled(PadBox).attrs(() => ({
   as: Center,
@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AppStyles>
-      <PricingPlans />
+      <Testimonial />
     </AppStyles>
   </React.StrictMode>
 );
